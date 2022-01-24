@@ -12,7 +12,11 @@
     <div id="app">
         <img :src="image">
         <p>Hello world!</p>
-        <p>{{currentDate()}}</p>
+        <p>{{ currentDate() }}</p>
+        <input v-model.number="first_number" type="number"></input><p>{{ first_number }}</p>
+        <input v-model.number="second_number" type="number"></input><p>{{ second_number }}</p>
+        <button v-on:click="calculate">Calculate</button>
+        <p>{{ calculate(answer) }}</p>
     </div>
     <!-- Import App -->
     <script src="./main.js"></script>
