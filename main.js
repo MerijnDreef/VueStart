@@ -14,8 +14,8 @@ const app = Vue.createApp({
         },
         calculate(first_number) {
             this.answer += first_number;
-            //console.log(answer);
             return this.answer;
+
         }
     }
 })
