@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@next"></script>
     <title>Hey hey</title>
@@ -14,9 +15,8 @@
         <p>Hello world!</p>
         <p>{{ currentDate() }}</p>
         <input v-model.number="first_number" type="number"></input><p>{{ first_number }}</p>
-        <input v-model.number="second_number" type="number"></input><p>{{ second_number }}</p>
-        <button v-on:click="calculate">Calculate</button>
-        <p>{{ calculate(answer) }}</p>
+        <button v-on:click="calculate(first_number)">Calculate</button>
+        <p>{{ answer }}</p>
     </div>
     <!-- Import App -->
     <script src="./main.js"></script>

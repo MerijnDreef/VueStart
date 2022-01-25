@@ -3,8 +3,7 @@ const app = Vue.createApp({
         return {
             image: './images/davinci_logo.png',
             first_number: '',
-            second_number: '',
-            answer: ''
+            answer: 0
         }
     },
     methods: {
@@ -13,9 +12,10 @@ const app = Vue.createApp({
             const date = `${current.getDate()}/${current.getMonth()+1}`;
             return date;
         },
-        calculate(first_number, second_number) {
-            answer = first_number + second_number;
-            return answer;
+        calculate(first_number) {
+            this.answer += first_number;
+            //console.log(answer);
+            return this.answer;
         }
     }
 })
